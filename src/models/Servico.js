@@ -10,6 +10,6 @@ const ServicoSchema = new mongoose.Schema({
     numero:String,
     telefone:String,
     image: String,
-});
+})
 
-module.exports = mongoose.model('Servico', ServicoSchema);
+module.exports = mongoose.model('Servico', ServicoSchema)

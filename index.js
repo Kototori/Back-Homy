@@ -16,8 +16,8 @@ mongoose.connect('mongodb+srv://republica:leo998709@cluster0-rcrnp.mongodb.net/s
     useUnifiedTopology: true
 });
 
-app.use(cors());
-app.use(express.json());
+app.use(cors())
+app.use(express.json())
 app.use(routes);
 
 
