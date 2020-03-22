@@ -1,8 +1,6 @@
 const axios = require('axios');
 const Servico = require('../models/Servico');
 
-
-
 module.exports = {
     async index(request,response){
         const serv = await Servico.find();
