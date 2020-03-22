@@ -18,6 +18,6 @@ const RepublicaSchema = new mongoose.Schema({
     redeSocial:String,
     rua:String,
     numero:String
-});
+})
 
-module.exports = mongoose.model('Republica', RepublicaSchema);
+module.exports = mongoose.model('Republica', RepublicaSchema)
