@@ -10,10 +10,12 @@ mongoose.connect('mongodb+srv://republica:leo998709@cluster0-rcrnp.mongodb.net/r
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+
+ 
 app.use(cors());
 app.use(express.json());
 app.use(routes);
 
 
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3333);
