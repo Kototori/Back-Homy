@@ -8,7 +8,6 @@ const RepublicaSchema = new mongoose.Schema({
     desc:String,
     animal:String,
     movelQuarto:String,
-    moveisComun:String,
     valorContas:String,
     observacao:String,
     imagem:String,
