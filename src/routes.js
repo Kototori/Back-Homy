@@ -12,11 +12,9 @@ routes.get('/main',RepublicaController.index);
 routes.post('/main',RepublicaController.store);
 routes.get('/servicos',ServicoController.index);
 routes.post('/servicos',ServicoController.store);
-
-routes.get('/usuario', UsuarioController);//show
+routes.get('/usuario', UsuarioController.auth);
 routes.post('/usuario', UsuarioController.store);
-
-routes.get('/carona', CaronaController).inde;
+routes.get('/carona', CaronaController.index);
 routes.post('/carona', CaronaController.store);
 
 

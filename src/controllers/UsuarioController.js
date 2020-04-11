@@ -10,7 +10,6 @@ module.exports = {
             console.log('o sistema não encontrou usuários/senha na data base.');
         }
         return response.json(userFromDb)  
-              
     },
 
 
