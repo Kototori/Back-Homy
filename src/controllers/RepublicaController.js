@@ -10,26 +10,44 @@ module.exports = {
 
    async store(request,response){
         console.log(request.body);
-        const { titulo,valor,bairro,pessoas,desc,animal,movelQuarto,moveisComun,valorContas,observacao,imagem, genero, numVagas,representante,redeSocial,rua,numero} = request.body;
+        const { nomeRepublica,
+            valorAluguel,
+            bairro,
+            rua,
+            numeroCasa,
+            pessoas,
+            descricao,
+            animal,
+            acomodacaoQuarto,
+            acomodacaoRepublica,
+            valorContas,
+            observacao,
+            imagem1,
+            imagem2,
+            imagem3,
+            genero,
+            numVagas,
+            representante} = request.body;
         console.log(titulo,valor);
          const republica = await Republica.create({
-             titulo,
-             valor,
-             bairro,
-             pessoas,
-             desc,
-             animal,
-             movelQuarto,
-             moveisComun,
-             valorContas,
-             observacao,
-             imagem,
-             genero,
-             numVagas,
-             representante,
-             redeSocial,
-             rua,
-             numero,
+            nomeRepublica,
+            valorAluguel,
+            bairro,
+            rua,
+            numeroCasa,
+            pessoas,
+            descricao,
+            animal,
+            acomodacaoQuarto,
+            acomodacaoRepublica,
+            valorContas,
+            observacao,
+            imagem1,
+            imagem2,
+            imagem3,
+            genero,
+            numVagas,
+            representante
          });
         return response.json(republica);
     }
