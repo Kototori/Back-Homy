@@ -13,7 +13,7 @@ module.exports = {
         const usuario = await Usuario.create({
             email,
             password,
-            nome,
+            nome
          });                  
             return response.json(Usuario);
         }
