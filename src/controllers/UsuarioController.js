@@ -4,24 +4,15 @@ const Usuario = require('../models/Usuario');
 module.exports = {
 
 
-    async auth(request, response) {
-        const userFromDb = await User.find({ email: Email, password: Senha});
-        if (userFromDb == null ) {
-            console.log('o sistema não encontrou usuários/senha na data base.');
-        }
-        return response.json(userFromDb)  
-    },
-
-
-
-
     async store(request, response) {
-        const { email, password, nome } = request.body;
-        const usuario = await Usuario.create({
-            email,
-            password,
-            nome,
-        });
-        return response.json(Usuario);
+        const userExists = await Usuario.findOne({email: request.body.email, cpf: request.body.cpf });
+
+        //Verifica se usuário já existe no bd com base no email e cpf
+        if (userExists) {
+            return response.status(400).json({ error: 'E-mail ou CPF já cadastrado' });
+        }
+        
+        const { email, nome } = await Usuario.create(request.body);
+        return response.json({ email, nome });
     }
 }

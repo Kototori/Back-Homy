@@ -16,8 +16,4 @@ app.use(routes);
 
 
 
-<<<<<<< HEAD
 app.listen(process.env.PORT || 3333);
-=======
-app.listen(process.env.PORT || 3333);
->>>>>>> af9dd1da1ed60d80488338e7538fd2b945a28781

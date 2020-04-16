@@ -11,7 +11,7 @@ module.exports = {
    async store(request,response){
         console.log(request.body);
         const { nome, nota, localSaida, localChegada, data, valor, horaSaida, horaChegada, embarque, imagem, desembarque,vagas} = request.body;
-        console.log(titulo,valor);
+        console.log(nome,valor);
          const carona = await Carona.create({
             nome,
             nota,
