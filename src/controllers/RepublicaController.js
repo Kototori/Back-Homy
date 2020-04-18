@@ -10,6 +10,12 @@ module.exports = {
 
    async store(request,response){
         console.log(request.body);
+        const republicaExists = await Usuario.findOne({ nomeRepublica: request.body.nomeRepublica });
+
+        //Verifica se república já existe no bd com base no nome da república
+        if (republicaExists) {
+            return response.status(400).json({ error: 'E-mail ou CPF já cadastrado' });
+        }
         const { nomeRepublica,
             valorAluguel,
             bairro,
