@@ -18,11 +18,20 @@ module.exports = {
             }
         });
 
-        const { nome } = usuario;
+        const { 
+            nome,
+            fotoPerfil,
+            celular,
+            cpf, } = usuario;
         //gera o token
         return response.json({
             usuario: {
-                nome, email,
+                email,
+                password,
+                nome,
+                fotoPerfil,
+                celular,
+                cpf,
             },
             token: jwt.sign({ nome }, '03c320353f0c534eccfa42baceaf605c', { expiresIn: '7d', })
         })
