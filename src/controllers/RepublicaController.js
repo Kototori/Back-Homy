@@ -33,7 +33,8 @@ module.exports = {
             imagem3,
             genero,
             numVagas,
-            representante} = request.body;
+            representante,
+            userEmail} = request.body;
         console.log(titulo,valor);
          const republica = await Republica.create({
             nomeRepublica,
@@ -53,7 +54,8 @@ module.exports = {
             imagem3,
             genero,
             numVagas,
-            representante
+            representante,
+            userEmail
          });
         return response.json(republica);
     }

@@ -10,7 +10,7 @@ module.exports = {
     },
 
    async store(request,response){
-    const { titulo,bairro,desc,observacao,redeSocial,rua,numero,telefone,image} = request.body;
+    const { titulo,bairro,desc,observacao,redeSocial,rua,numero,telefone,image,userEmail} = request.body;
    console.log(titulo,bairro);
     const servico = await Servico.create({
         titulo,
@@ -21,7 +21,8 @@ module.exports = {
         rua,
         numero,
         telefone,
-        image
+        image,
+        userEmail
      });
               
         return response.json(servico);
