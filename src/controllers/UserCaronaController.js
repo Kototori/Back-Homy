@@ -3,7 +3,7 @@ const Carona = require('../models/Carona');
 
 module.exports = {
     async index(request,response){
-        const userEmail = request.body.email;
+        const userEmail = request.params("user");
         if (!userEmail){
             return response.status(401).json({ error: 'email não encontrado' });
         }

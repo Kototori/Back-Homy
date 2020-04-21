@@ -26,9 +26,9 @@ routes.post('/usuario', UsuarioController.store);
 routes.get('/carona', CaronaController.index);
 routes.post('/carona', CaronaController.store);
 //rotas mostrando anúncios
-routes.get('/userCarona', UserCaronaController.index);
-routes.get('/userRepublica', UserRepublicaController.index);
-routes.get('/userServico', UserServicoController.index);
+routes.get('/userCarona/:user', UserCaronaController.index);
+routes.get('/userRepublica/:user', UserRepublicaController.index);
+routes.get('/userServico/:user', UserServicoController.index);
 
 
 module.exports = routes;
