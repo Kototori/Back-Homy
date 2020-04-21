@@ -12,7 +12,8 @@ const CaronaSchema = new mongoose.Schema({
     embarque:String,
     imagem:String,
     desembarque:String,
-    vagas:String
+    vagas:String,
+    userEmail: String,
 });
 
 module.exports = mongoose.model('Carona', CaronaSchema);

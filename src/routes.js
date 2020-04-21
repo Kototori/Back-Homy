@@ -7,6 +7,9 @@ const ServicoController =  require('./controllers/ServicoController');
 const UsuarioController =  require('./controllers/UsuarioController');
 const CaronaController =  require('./controllers/CaronaController');
 const SessionController =  require('./controllers/SessionController');
+const UserCaronaController =  require('./controllers/UserCaronaController');
+const UserRepublicaController =  require('./controllers/UserRepublicaController');
+const UserServicoController =  require('./controllers/UserServicoController');
 
 
 
@@ -22,6 +25,10 @@ routes.post('/usuario', UsuarioController.store);
 //rotas do cadastro e display de caronas
 routes.get('/carona', CaronaController.index);
 routes.post('/carona', CaronaController.store);
+//rotas mostrando anúncios
+routes.get('/userCarona', UserCaronaController.index);
+routes.get('/userRepublica', UserRepublicaController.index);
+routes.get('/userServico', UserServicoController.index);
 
 
 module.exports = routes;

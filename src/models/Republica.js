@@ -19,6 +19,7 @@ const RepublicaSchema = new mongoose.Schema({
     genero:String,
     numVagas:String,
     representante:String,
+    userEmail: String,
     
     
 });
