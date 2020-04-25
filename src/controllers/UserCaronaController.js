@@ -7,7 +7,7 @@ module.exports = {
         if (!userEmail){
             return response.status(401).json({ error: 'email não encontrado' });
         }
-        const caronas = await Carona.find( userEmail );
+        const caronas = await Carona.find( {userEmail} );
         return response.json(caronas);
     }
 }

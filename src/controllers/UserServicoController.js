@@ -7,7 +7,7 @@ module.exports = {
         if (!userEmail){
             return response.status(401).json({ error: 'email não encontrado' });
         }
-        const servicos = await Servico.find( userEmail );
+        const servicos = await Servico.find( {userEmail} );
         return response.json(servicos);
     }
 }
