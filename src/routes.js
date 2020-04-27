@@ -11,8 +11,6 @@ const UserCaronaController =  require('./controllers/UserCaronaController');
 const UserRepublicaController =  require('./controllers/UserRepublicaController');
 const UserServicoController =  require('./controllers/UserServicoController');
 
-
-
 //rotas do cadastro e display de republicas
 routes.get('/main',RepublicaController.index);
 routes.post('/main',RepublicaController.store);
