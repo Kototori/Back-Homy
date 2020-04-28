@@ -7,7 +7,8 @@ require('dotenv').config();
 
 mongoose.connect(process.env.MONGO_CS,{    			  
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 });
 
 app.use(cors())
