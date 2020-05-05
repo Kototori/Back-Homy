@@ -19,14 +19,14 @@ routes.put('/main/:user', RepublicaController.update);
 //rotas do cadastro, display e atualização de serviços
 routes.get('/servicos',ServicoController.index);
 routes.post('/servicos',ServicoController.store);
-//routes.put('/servico/:user', function(req, res){ServicoController.update});
+routes.put('/servico/:user', ServicoController.update);
 //rotas do cadastro e login de usuario
 routes.post('/session', SessionController.store);
 routes.post('/usuario', UsuarioController.store);
 //rotas do cadastro, display e atualização de caronas
 routes.get('/carona', CaronaController.index);
 routes.post('/carona', CaronaController.store);
-//routes.put('/carona/:user', function(req, res){CaronaController.update});
+routes.put('/carona/:user', CaronaController.update);
 //rotas mostrando anúncios
 routes.get('/userCarona/:user', UserCaronaController.index);
 routes.get('/userRepublica/:user', UserRepublicaController.index);
