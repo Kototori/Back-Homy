@@ -20,6 +20,7 @@ const RepublicaSchema = new mongoose.Schema({
     numVagas:String,
     representante:String,
     userEmail: String,
+    telefone: String,
     
     
 });

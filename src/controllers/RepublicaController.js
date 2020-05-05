@@ -34,7 +34,8 @@ module.exports = {
             genero,
             numVagas,
             representante,
-            userEmail } = request.body;
+            userEmail,
+            telefone } = request.body;
         console.log(titulo, valor);
         const republica = await Republica.create({
             nomeRepublica,
@@ -55,7 +56,8 @@ module.exports = {
             genero,
             numVagas,
             representante,
-            userEmail
+            userEmail,
+            telefone
         });
         return response.json(republica);
     },
@@ -82,7 +84,8 @@ module.exports = {
             imagem3,
             genero,
             numVagas,
-            representante } = request.body;
+            representante,
+            telefone } = request.body;
         const republicas = await Republica.findOneAndUpdate({ userEmail }, {
             $set: {
                 nomeRepublica,
@@ -102,9 +105,10 @@ module.exports = {
                 imagem3,
                 genero,
                 numVagas,
-                representante
+                representante,
+                telefone
             },
-        },{ new: true, omitUndefined: true })
+        }, { new: true, omitUndefined: true })
         return response.json(republicas);
     }
 }
