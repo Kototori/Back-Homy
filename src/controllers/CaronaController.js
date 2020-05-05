@@ -10,7 +10,7 @@ module.exports = {
 
     async store(request, response) {
         console.log(request.body);
-        const { nome, nota, localSaida, localChegada, data, valor, horaSaida, horaChegada, embarque, imagem, desembarque, vagas, userEmail } = request.body;
+        const { nome, nota, localSaida, localChegada, data, valor, horaSaida, horaChegada, embarque, imagem, desembarque, vagas, userEmail, telefone } = request.body;
         console.log(nome, valor);
         const carona = await Carona.create({
             nome,
@@ -25,7 +25,8 @@ module.exports = {
             imagem,
             desembarque,
             vagas,
-            userEmail
+            userEmail,
+            telefone
         });
         return response.json(carona);
     },
@@ -46,7 +47,9 @@ module.exports = {
             embarque,
             imagem,
             desembarque,
-            vagas, } = request.body;
+            vagas,
+        telefone,
+     } = request.body;
         const carona = await Carona.findOneAndUpdate({ userEmail }, {
             $set: {
                 nome,
@@ -61,6 +64,7 @@ module.exports = {
                 imagem,
                 desembarque,
                 vagas,
+                telefone
             },
         }, { new: true, omitUndefined: true })
         return response.json(carona);

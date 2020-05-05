@@ -14,6 +14,7 @@ const CaronaSchema = new mongoose.Schema({
     desembarque:String,
     vagas:String,
     userEmail: String,
+    telefone: String,
 });
 
 module.exports = mongoose.model('Carona', CaronaSchema);
