@@ -21,6 +21,7 @@ const RepublicaSchema = new mongoose.Schema({
     representante: String,
     userEmail: String,
     telefone: String,
+    imovel: String,
 });
 
 module.exports = mongoose.model('Republica', RepublicaSchema);
