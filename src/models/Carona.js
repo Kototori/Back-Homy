@@ -5,7 +5,7 @@ const CaronaSchema = new mongoose.Schema({
     nota:String,
     localSaida:String,
     localChegada:String,
-    data: Date,
+    data: {type: Date, expires: 86400},
     valor:String,
     horaSaida: Date,
     horaChegada:Date,
