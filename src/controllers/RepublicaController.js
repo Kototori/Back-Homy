@@ -10,7 +10,7 @@ module.exports = {
 
     async store(request, response) {
         console.log(request.body);
-        const republicaExists = await Usuario.findOne({ nomeRepublica: request.body.nomeRepublica });
+        const republicaExists = await Republica.findOne({ nomeRepublica: request.body.nomeRepublica });
 
         //Verifica se república já existe no bd com base no nome da república
         if (republicaExists) {
@@ -37,7 +37,7 @@ module.exports = {
             userEmail,
             telefone,
             imovel } = request.body;
-        console.log(titulo, valor);
+        console.log(nomeRepublica, valorAluguel);
         const republica = await Republica.create({
             nomeRepublica,
             valorAluguel,
