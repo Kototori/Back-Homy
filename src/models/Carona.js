@@ -5,14 +5,16 @@ const CaronaSchema = new mongoose.Schema({
     nota:String,
     localSaida:String,
     localChegada:String,
-    data:String,
+    data: {type: Date, expires: 86400},
     valor:String,
-    horaSaida:String,
-    horaChegada:String,
+    horaSaida: Date,
+    horaChegada:Date,
     embarque:String,
     imagem:String,
     desembarque:String,
-    vagas:String
+    vagas:String,
+    userEmail: String,
+    telefone: String,
 });
 
 module.exports = mongoose.model('Carona', CaronaSchema);
