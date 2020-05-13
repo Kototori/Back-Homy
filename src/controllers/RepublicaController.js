@@ -6,7 +6,6 @@ module.exports = {
         const repubs = await Republica.find();
         console.log(repubs);
         console.log(JSON.stringify(repubs));
-)
         return response.json(repubs);
     },
 
