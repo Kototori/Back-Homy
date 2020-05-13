@@ -5,6 +5,8 @@ module.exports = {
     async index(request, response) {
         const repubs = await Republica.find();
         console.log(repubs);
+        console.log(JSON.stringify(repubs));
+)
         return response.json(repubs);
     },
 
