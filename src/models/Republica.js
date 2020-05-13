@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const RepublicaSchema = new mongoose.Schema({
     nomeRepublica: String,
-    valorAluguel: String,
+    valorAluguel: Number,
     bairro: String,
     rua: String,
     numeroCasa: String,
@@ -11,7 +11,7 @@ const RepublicaSchema = new mongoose.Schema({
     animal: String,
     acomodacaoQuarto: String,
     acomodacaoRepublica: String,
-    valorContas: String,
+    valorContas: Number,
     observacao: String,
     imagem1: String,
     imagem2: String,
