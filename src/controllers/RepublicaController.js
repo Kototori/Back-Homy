@@ -4,6 +4,7 @@ const Republica = require('../models/Republica');
 module.exports = {
     async index(request, response) {
         const repubs = await Republica.find();
+        console.log(repubs);
         return response.json(repubs);
     },
 
