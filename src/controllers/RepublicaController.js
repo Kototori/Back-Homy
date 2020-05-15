@@ -15,7 +15,7 @@ module.exports = {
 
         //Verifica se república já existe no bd com base no nome da república
         if (republicaExists) {
-            return response.status(400).json({ error: 'E-mail ou CPF já cadastrado' });
+            return response.status(400).json({ error: 'República já existe' });
         }
         const { nomeRepublica,
             valorAluguel,
