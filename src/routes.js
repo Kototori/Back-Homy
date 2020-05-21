@@ -28,16 +28,12 @@ routes.post('/usuario', UsuarioController.store);
 routes.get('/carona', CaronaController.index);
 routes.post('/carona', CaronaController.store);
 routes.put('/carona/:user', CaronaController.update);
-<<<<<<< Updated upstream
-=======
-routes.delete('/carona/delete', CaronaController.delete);
+//routes.delete('/carona/delete', CaronaController.delete);
 //rotas sobre as vagas da carona
-routes.post('/carona/vagas', CaronaVagaController.vagas);
-routes.post('/carona/votar', CaronaVagaController.votar);
-routes.post('/carona/interesse', CaronaVagaController.interesse);
-routes.put('/carona/retornaInteresse', CaronaVagaController.retornaInteresse);
-
->>>>>>> Stashed changes
+//routes.post('/carona/vagas', CaronaVagaController.vagas);
+//routes.post('/carona/votar', CaronaVagaController.votar);
+//routes.post('/carona/interesse', CaronaVagaController.interesse);
+//routes.put('/carona/retornaInteresse', CaronaVagaController.retornaInteresse);
 //rotas mostrando anúncios
 routes.get('/userCarona/:user', UserCaronaController.index);
 routes.get('/userRepublica/:user', UserRepublicaController.index);
