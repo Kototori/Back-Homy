@@ -10,6 +10,7 @@ const SessionController =  require('./controllers/SessionController');
 const UserCaronaController =  require('./controllers/UserCaronaController');
 const UserRepublicaController =  require('./controllers/UserRepublicaController');
 const UserServicoController =  require('./controllers/UserServicoController');
+const UserConfirmController =  require('./controllers/UsuarioConfirmController');
 
 
 //rotas do cadastro, display e atualização de republicas
@@ -41,6 +42,8 @@ routes.put('/carona/retornaInteresse', CaronaVagaController.retornaInteresse);
 routes.get('/userCarona/:user', UserCaronaController.index);
 routes.get('/userRepublica/:user', UserRepublicaController.index);
 routes.get('/userServico/:user', UserServicoController.index);
+//rota de confirmação de email
+routes.put('/confirma/:user', UserConfirmController.update);
 
 
 
