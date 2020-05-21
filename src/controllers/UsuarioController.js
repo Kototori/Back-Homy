@@ -24,7 +24,8 @@ module.exports = {
             celular,
             cpf,
             confirmed,
-            numConfirm } = await Usuario.create(request.body);
+            numConfirm,
+            nota } = await Usuario.create(request.body);
         await sendEmail(email, numConfirm, nome);
 
         return response.json({
@@ -35,7 +36,8 @@ module.exports = {
             celular,
             cpf,
             confirmed,
-            numConfirm
+            numConfirm,
+            nota
         });
     }
 }
