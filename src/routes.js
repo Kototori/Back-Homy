@@ -11,6 +11,9 @@ const UserCaronaController =  require('./controllers/UserCaronaController');
 const UserRepublicaController =  require('./controllers/UserRepublicaController');
 const UserServicoController =  require('./controllers/UserServicoController');
 const UserConfirmController =  require('./controllers/UsuarioConfirmController');
+const CaronaVagaController = require('./controllers/CaronaVagaController');
+const UserNota = require('./controllers/UserNota');
+const VagasController = require('./controllers/VagasController');
 
 
 //rotas do cadastro, display e atualização de republicas
@@ -28,12 +31,11 @@ routes.post('/usuario', UsuarioController.store);
 routes.get('/carona', CaronaController.index);
 routes.post('/carona', CaronaController.store);
 routes.put('/carona/:user', CaronaController.update);
-//routes.delete('/carona/delete', CaronaController.delete);
-//rotas sobre as vagas da carona
-//routes.post('/carona/vagas', CaronaVagaController.vagas);
-//routes.post('/carona/votar', CaronaVagaController.votar);
-//routes.post('/carona/interesse', CaronaVagaController.interesse);
-//routes.put('/carona/retornaInteresse', CaronaVagaController.retornaInteresse);
+//rotas sobre as vagas da carona e nota
+routes.put('/caronavaga/:user', VagasController.vagas);
+routes.put('/userNota/:user', UserNota.votar);
+routes.put('/carona/interesse/:user', CaronaVagaController.interesse);
+routes.get('/carona/retornaInteresse/:user', CaronaVagaController.retornaInteresse);
 //rotas mostrando anúncios
 routes.get('/userCarona/:user', UserCaronaController.index);
 routes.get('/userRepublica/:user', UserRepublicaController.index);

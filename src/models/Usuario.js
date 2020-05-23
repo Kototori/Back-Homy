@@ -11,7 +11,8 @@ const UsuarioSchema = new mongoose.Schema({
     cpf: String,
     confirmed: { type: Boolean, default: false },
     numConfirm: { type: Number, default: function () { return Math.floor(Math.random() * 1000000); } },
-    nota: Number,
+    nota:{ type: Number, default: 0 },
+    votos: { type: Number, default: 0 },
 });
 //encripta a senha
 UsuarioSchema.pre('save', async function (next) {
