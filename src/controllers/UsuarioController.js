@@ -25,7 +25,8 @@ module.exports = {
             cpf,
             confirmed,
             numConfirm,
-            nota } = await Usuario.create(request.body);
+            nota,
+            votos } = await Usuario.create(request.body);
         await sendEmail(email, numConfirm, nome);
 
         return response.json({
@@ -37,7 +38,8 @@ module.exports = {
             cpf,
             confirmed,
             numConfirm,
-            nota
+            nota,
+            votos
         });
     }
 }

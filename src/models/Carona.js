@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const CaronaSchema = new mongoose.Schema({
     nome:String,
-    nota:String,
+    nota: Number,
     localSaida:String,
     localChegada:String,
     data: {type: Date, expires: 86400},
@@ -12,9 +12,11 @@ const CaronaSchema = new mongoose.Schema({
     embarque:String,
     imagem:String,
     desembarque:String,
-    vagas:String,
+    vagas: Number,
     userEmail: String,
     telefone: String,
+    votos: Number,
+    interesse: String,
 });
 
 module.exports = mongoose.model('Carona', CaronaSchema);
